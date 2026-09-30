@@ -40,3 +40,7 @@ int main()
     }
     return 0;
 }
+//Amazon Google
+//Shradha Kapra Apna College
+// Medium 
+// LC 169
