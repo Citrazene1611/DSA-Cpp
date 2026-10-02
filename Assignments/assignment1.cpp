@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <math.h>
 using namespace std;
-int main(){
+int m1(){
 int x,y,z;
 cout<<"Enter first number :";
 cin>>x;
@@ -13,8 +13,8 @@ cin>>z;
 cout<<"sum is"<<" "<<x+y+z;
 return 0;
 }
-/*
-int main()
+
+int m2()
 {
  cout<<"operations:sum(+):substraction(-):product(*):division(/):Modulus(K)"<<endl;
  char x ;
@@ -47,7 +47,7 @@ int main()
 return 0;
 }
 
-int main ()
+int m3 ()
 {
  double a,b;
  cout<<"Enter Length:";
@@ -58,7 +58,7 @@ int main ()
  return 0;
 }
 
-int main ()
+int m4 ()
 {
     float r,z;
     cout<<"Enter the radius";
@@ -68,7 +68,7 @@ int main ()
     return 0;
 }
 
-int main(){
+int m5(){
 int x,y,z;
 cout<<"Enter first number(x):";
 cin>>x;
@@ -82,7 +82,7 @@ cout<<"y is"<<" "<<y;
 return 0;
 }
 
-int main(){
+int m6(){
 int x,y;
 cout<<"Enter first number(x):";
 cin>>x;
@@ -96,7 +96,7 @@ cout<<"y is"<<" "<<y;
 return 0;
 }
 
-int main(){
+int m7(){
 int x,z;
 cout<<"Enter number(x):";
 cin>>x;
@@ -111,7 +111,7 @@ else if (z=!0)
  return 0;
 }
 
-int main(){
+int m8(){
 float x;
 cout<<"Enter number:";
 cin>>x;
@@ -125,7 +125,7 @@ else if (x>0)
  return 0;
 }
 
-int main(){
+int m9(){
 int x,y;
 cout<<"Enter number:";
 cin>>x;
@@ -137,7 +137,7 @@ else{cout<<y<<" is greater than "<<x;}
  return 0;
 }
 
-int main()
+int m10()
 {
 int x;
 cout<<"Enter your age";
@@ -150,7 +150,7 @@ else{cout<<"You can't vote kiddo.";}
  return 0;
 }
 
-int main(){
+int m11(){
 int x;
 cout<<"Enter year:";
 cin>>x;
@@ -162,7 +162,7 @@ return 0;
 }
 
 
-int main(){
+int m12(){
 char X;
 cout<<"Enter alphabet(in lower case)";
 cin>>X;
@@ -176,7 +176,7 @@ return 0;
 }
 
 
-int main()
+int m13()
 {
 int x;
 cout<<"Enter a number";
@@ -187,7 +187,7 @@ else {cout<<"Not divisible by5,11";}
 return 0;
 }
 
-int main()
+int m14()
 {
 int a;
 cout<<"Enter your marks";
@@ -204,7 +204,7 @@ else if(a<20,a>=10){cout<<"E grade score";}
 return 0;
 }
 
-int main ()
+int m15 ()
 {
  int a;
  cout<<"Enter month number:";
@@ -225,7 +225,7 @@ int main ()
  return 0;
 }
 
-int main ()
+int m16 ()
 {
  int a;
  cout<<"Enter Day number:";
@@ -241,7 +241,7 @@ int main ()
  return 0;
 }
 
-int main ()
+int m17 ()
 {
  double a,b;
  cout<<"Enter no. of units consumed.";
@@ -252,7 +252,7 @@ int main ()
  return 0;
 }
 
-int main ()
+int m18 ()
 {
  double a;
  cout<<"Enter your income in per annum format:"<<endl;
@@ -270,7 +270,7 @@ else{cout<<"Invalid Input.";}
 return 0;
 }
 
-int main ()
+int m19 ()
 {
  double a,b,c;
  cout<<"Enter Cost Price:";
@@ -285,7 +285,7 @@ int main ()
  return 0;
 }
 
-int main()
+int m20()
 {
 float a,b,c,d;
 cout<<"Enter number:";
@@ -312,7 +312,7 @@ if (a >= b && a >= c && a >= d) {
 return 0;
 }
 
-int main() {
+int m21() {
     char ch;
     cout << "Enter any character: ";
     cin >> ch;
@@ -333,7 +333,7 @@ int main() {
     // GEMini copied code (ask as doubt)
 }
 
-int main ()
+int m22 ()
 {
  float a,b,c,d;
  cout<<"Enter number:";
@@ -352,7 +352,7 @@ cout<<"The greatest number is"<<" ";
  return 0 ;
 }
 
-int main()
+int m23()
 {
  float a,b,c;
  cout<<"Enter length of side:";
@@ -366,7 +366,7 @@ int main()
  return 0;
 }
 
-int main ()
+int m24 ()
 {
 char chg,Q,W,E,R,T,Y,U,I,O,P,A,S,D,F,G,H,J,K,L,Z,X,C,V,B,N,M;
 cout<<"Enter the character:";
@@ -376,4 +376,7 @@ if(chg=$){cout<<"Uppercase character.";})
 else {cout<<"Lowercase character.";}
 return 0;
 }
-*/
+int main()
+{
+ return 0;
+}
