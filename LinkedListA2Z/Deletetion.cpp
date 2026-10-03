@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <vector>
 #include <cstdlib>
+// Delete N Nodes After M Nodes of a Linked List
 using namespace std;
 struct node
 {
@@ -28,7 +29,7 @@ node *convertarrtoll(vector<int> &arr)
     }
     return head;
 }
-node *remove(node *head, int n,int m)
+ node *remove(node *head, int n, int m)
 {
     node *temp = head;
     int cnt = 0;
@@ -55,10 +56,10 @@ node *remove(node *head, int n,int m)
         cnt++;
         if (cnt == n)
         {
-            for(int i=0;i<m;i++)
+            for (int i = 0; i < m; i++)
             {
-            prev->next = prev->next->next;
-            free(temp);
+                prev->next = prev->next->next;
+                free(temp);
             }
             break;
         }
@@ -71,7 +72,7 @@ int main()
 {
     vector<int> j = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17};
     node *head = convertarrtoll(j);
-    head = remove(head,12,3);
+    head = remove(head, 12, 3);
     node *temp = head;
     while (temp != NULL)
     {
