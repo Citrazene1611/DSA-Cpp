@@ -16,7 +16,7 @@
             "intelliSenseMode": "windows-msvc-x64"
         },
         {
-            "name": "Win32",
+            "name": "Win32-Release",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
