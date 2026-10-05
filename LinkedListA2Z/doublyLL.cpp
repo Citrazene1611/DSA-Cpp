@@ -121,11 +121,88 @@ node *deleteindex(node *head, int index)
     }
     return head;
 }
+// insertion at head
+node *inserthead(node *head, int val)
+{
+    if (head == NULL)
+    {
+        node *k = new node(val, nullptr, nullptr);
+        return k;
+    }
+    else
+    {
+
+        node *k = new node(val);
+        k->next = head;
+        k->prev = nullptr;
+
+        return k;
+    }
+}
+// insertion at tail
+node *inserttail(node *head, int val)
+{
+    if (head == NULL)
+    {
+        node *k = new node(val, nullptr, nullptr);
+        return k;
+    }
+    else
+    {
+
+        node *temp = head;
+        while (temp->next != NULL)
+        {
+            temp = temp->next;
+        }
+
+        node *k = new node(val, nullptr, temp);
+        temp->next = k;
+    }
+    return head;
+}
+// insertion at kth index
+node *insertk(node *head, int index, int val)
+{
+    node *temp = head;
+    int cnt = 0;
+    while (temp != NULL)
+    {
+        cnt++;
+        if (cnt == index)
+        {
+            break;
+        }
+        temp = temp->next;
+    }
+    node *back = temp->prev;
+    node *front = temp->next;
+    if (back == NULL && front == NULL)
+    {
+        node *k = new node(val, nullptr, temp);
+    }
+    else if (back == NULL)
+    {
+        inserthead(head, val);
+    }
+    else if (front == NULL)
+    {
+        inserttail(head, val);
+    }
+    else
+    {
+        node*k= new node(val,temp->next,temp);
+        temp->next=k;
+        temp=temp->next;
+        temp->prev=k;
+    }
+    return head;
+}
 int main()
 {
     vector<int> Q = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 14, 16, 17, 18, 19};
     node *k = convert2DLL(Q);
-    node *t = deleteindex(k, 5);
+    node *t = insertk(k, 5,99);
     while (t != NULL)
     {
         cout << t->data << endl;
