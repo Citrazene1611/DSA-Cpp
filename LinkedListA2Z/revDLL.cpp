@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <vector>
 #include <cstdlib>
+#include <stack>
 using namespace std;
 struct node
 {
@@ -39,19 +40,45 @@ node *convert2DLL(vector<int> &arr)
 
     return head;
 }
-node* rev(node* head)
+node *rev(node *head)
 {
-   stack<int>
+    node *a;
+    node *temp = head;
+    node *back = nullptr;
+    node *front = nullptr;
+    if (temp == NULL || (temp->next == NULL || temp->prev == NULL))
+    {
+        return temp;
+    }
+    while (temp != NULL)
+    {
+
+        temp->next = front;
+        temp->prev = back;
+        a = front;
+        front = back;
+        back = a;
+        // move temp ahead
+        temp->next = front;
+        temp->prev = back;
+        temp = temp->next;
+    }
+    return temp;
 }
-int main()
+int print(node *head)
 {
-    vector<int> Q = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 14, 16, 17, 18, 19};
-    node *k = convert2DLL(Q);
-    node *t = rev(k);
+    node *t = head;
     while (t != NULL)
     {
         cout << t->data << endl;
         t = t->next;
     }
+    return 0;
+}
+int main()
+{
+    vector<int> Q = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 14, 16, 17, 18, 19};
+    node *k = convert2DLL(Q);
+    print(rev(k));
     return 0;
 }
