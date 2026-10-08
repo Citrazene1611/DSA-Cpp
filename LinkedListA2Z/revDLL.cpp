@@ -42,43 +42,31 @@ node *convert2DLL(vector<int> &arr)
 }
 node *rev(node *head)
 {
-    node *a;
-    node *temp = head;
-    node *back = nullptr;
-    node *front = nullptr;
-    if (temp == NULL || (temp->next == NULL || temp->prev == NULL))
+    node *current = head;
+    node *newHead = nullptr;
+    while (current != nullptr)
     {
-        return temp;
+        node *next = current->next;
+        current->next = current->prev;
+        current->prev = next;
+        newHead = current;
+        current = next;
+        return newHead;
     }
-    while (temp != NULL)
+    int print(node * head)
     {
-
-        temp->next = front;
-        temp->prev = back;
-        a = front;
-        front = back;
-        back = a;
-        // move temp ahead
-        temp->next = front;
-        temp->prev = back;
-        temp = temp->next;
+        node *t = head;
+        while (t != NULL)
+        {
+            cout << t->data << endl;
+            t = t->next;
+        }
+        return 0;
     }
-    return temp;
-}
-int print(node *head)
-{
-    node *t = head;
-    while (t != NULL)
+    int main()
     {
-        cout << t->data << endl;
-        t = t->next;
+        vector<int> Q = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 14, 16, 17, 18, 19};
+        node *k = convert2DLL(Q);
+        print(rev(k));
+        return 0;
     }
-    return 0;
-}
-int main()
-{
-    vector<int> Q = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 14, 16, 17, 18, 19};
-    node *k = convert2DLL(Q);
-    print(rev(k));
-    return 0;
-}
