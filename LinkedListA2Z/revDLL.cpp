@@ -51,22 +51,25 @@ node *rev(node *head)
         current->prev = next;
         newHead = current;
         current = next;
+    }
         return newHead;
-    }
-    int print(node * head)
+
+}
+void print(node *head)
+{
+    node *t = head;
+    while (t != NULL)
     {
-        node *t = head;
-        while (t != NULL)
-        {
-            cout << t->data << endl;
-            t = t->next;
-        }
-        return 0;
+        cout << t->data << endl;
+        t = t->next;
     }
-    int main()
-    {
-        vector<int> Q = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 14, 16, 17, 18, 19};
-        node *k = convert2DLL(Q);
-        print(rev(k));
-        return 0;
-    }
+    
+}
+int main()
+{
+    vector<int> a = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    node* j = convert2DLL(a);
+    node* an = rev(j);
+    print(an);
+    return 0;
+}
